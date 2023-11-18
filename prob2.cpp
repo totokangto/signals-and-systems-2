@@ -19,9 +19,9 @@ int main() {
 
 	// 1. w[k] = 1 (0 <= k <= n+5), y[n] = n+6 (-5<=n<-1)
 	cout << "-5 <= n < -1" << endl;
-	for (int n = 0; n < 2; n++) {
+	for (int n = -5; n < -1; n++) {
 		int y = 0;
-		for (int k = 0; k <= n; k++) {
+		for (int k = 0; k <= n+5; k++) {
 			// first index of array is 0, but x[n] starts at n = -5
 			// to resolve it, I add 5 at index of array 
 			// so that x[-5] means ir_x[0]
