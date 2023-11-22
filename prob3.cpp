@@ -71,6 +71,6 @@ int main() {
 		a_axis_file << y << endl;
 	}
 	cout << endl;
-
+	system("pause");
 	return 0;
 }
