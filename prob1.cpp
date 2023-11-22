@@ -15,7 +15,9 @@ int main() {
 	ofstream y_axis_file;
 	n_axis_file.open("prob1_n_axis.txt");
 	y_axis_file.open("prob1_y_axis.txt");
-
+	
+	// Let be Wn[k] = x[k]*h[n-k]
+	// 1. Wn[k] = 1 (0 <= k <= n), y[n] = n + 1 (0<=n<2)
 	cout << "0 <= n < 2" << endl;
 	for (int n = 0; n < 2; n++) {
 		int y = 0;
@@ -28,7 +30,7 @@ int main() {
 	}
 	cout << endl;
 
-	// w[k] = 1 (n-2 <= k <= n), y[n] = 3 (2<=n<5)
+	// 2. Wn[k] = 1 (n-2 <= k <= n), y[n] = 3 (2<=n<5)
 	cout << "2 <= n < 5" << endl;
 	for (int n = 2; n < 5; n++) {
 		int y = 0;
@@ -41,7 +43,7 @@ int main() {
 	}
 	cout << endl;
 
-	// w[k] = 1 (n-2 <= k <= 4), y[n] = 7-n (5<=n<7)
+	// 3. Wn[k] = 1 (n-2 <= k <= 4), y[n] = 7-n (5<=n<7)
 	cout << "5 <= n < 7" << endl;
 	for (int n = 5; n < 7; n++) {
 		int y = 0;
