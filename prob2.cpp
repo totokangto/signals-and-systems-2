@@ -83,6 +83,6 @@ int main() {
 		n_axis_file << n << endl;
 		a_axis_file << a << endl;
 	}
-	
+	system("pause");
 	return 0;
 }
