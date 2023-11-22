@@ -54,5 +54,6 @@ int main() {
 		n_axis_file << n << endl;
 		y_axis_file << y << endl;
 	}
+	system("pause");
 	return 0;
 }
