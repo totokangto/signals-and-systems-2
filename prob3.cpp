@@ -16,8 +16,8 @@ int main() {
 	n_axis_file.open("prob3_n_axis.txt");
 	a_axis_file.open("prob3_a_axis.txt");
 
-
-	// 1. w[k] = 1 (0 <= k <= n+5), y[n] = n+6 (-5<=n<-1)
+	// let be Wn[k] = y[k]*w[n-k]
+	// 1. Wn[k] = w[n-k] (-3 <= k <= 4)
 	cout << "-7 <= n < -3" << endl;
 	for (int n = -7; n < -3; n++) {
 		int y = 0;
@@ -33,7 +33,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 1-2. w[k] = 1 (0 <= k <= 3), w[k] = 2 (4 <= k <= n+5), y[n] = 2n+8 (-1<=n<1) 
+	// 1-2. Wn[k] = -w[n-k] (1 <= k <= n+4), Wn[k] = w[n-k] (-3 <= k <= 0)
 	cout << "-3 <= n < 1" << endl;
 	for (int n = -3; n < 1; n++) {
 		int y = 0;
@@ -46,7 +46,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 2. w[k] = 1 (n-1 <= k <= 3), w[k] = 2 (4 <= k <= n+5), y[n] = n+9 (1<=n<4) 
+	// 1.3. Wn[k] = -w[n-k] (1 <= k <= 4), Wn[k] = w[n-k] (n-4 <= k <= 0)
 	cout << "1 <= n < 5" << endl;
 	for (int n = 1; n < 5; n++) {
 		int y = 0;
@@ -59,7 +59,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 3. w[k] = 1 (n-1 <= k <= 3), w[k] = 2 (4 <= k <= 8), y[n] = -n+15 (4<=n<5)
+	// 1-4. Wn[k] = -w[n-k] (n-4 <= k <= 4)
 	cout << "5 <= n < 9" << endl;
 	for (int n = 5; n < 9; n++) {
 		int y = 0;
