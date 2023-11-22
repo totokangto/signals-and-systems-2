@@ -16,8 +16,8 @@ int main() {
 	n_axis_file.open("prob2_n_axis.txt");
 	a_axis_file.open("prob2_a_axis.txt");
 
-
-	// 1. w[k] = 1 (0 <= k <= n+5), a[n] = n+6 (-5<=n<-1)
+	// Let be Wn[k] = z[k]*x[n-k]
+	// 1. Wn[k] = 1 (0 <= k <= n+5), a[n] = n+6 (-5<=n<-1)
 	cout << "-5 <= n < -1" << endl;
 	for (int n = -5; n < -1; n++) {
 		int a = 0;
@@ -33,7 +33,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 1-2. w[k] = 1 (0 <= k <= 3), w[k] = 2 (4 <= k <= n+5), a[n] = 2n+8 (-1<=n<1) 
+	// 1-2. Wn[k] = 1 (0 <= k <= 3), Wn[k] = 2 (4 <= k <= n+5), a[n] = 2n+8 (-1<=n<1) 
 	cout << "-1 <= n < 1" << endl;
 	for (int n = -1; n < 1; n++) {
 		int a = 0;
@@ -46,7 +46,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 2. w[k] = 1 (n-1 <= k <= 3), w[k] = 2 (4 <= k <= n+5), a[n] = n+9 (1<=n<4) 
+	// 2. Wn[k] = 1 (n-1 <= k <= 3), Wn[k] = 2 (4 <= k <= n+5), a[n] = n+9 (1<=n<4) 
 	cout << "1 <= n < 4" << endl;
 	for (int n = 1; n < 4; n++) {
 		int a = 0;
@@ -59,7 +59,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 3. w[k] = 1 (n-1 <= k <= 3), w[k] = 2 (4 <= k <= 8), a[n] = -n+15 (4<=n<5)
+	// 3. Wn[k] = 1 (n-1 <= k <= 3), Wn[k] = 2 (4 <= k <= 8), a[n] = -n+15 (4<=n<5)
 	cout << "4 <= n < 5" << endl;
 	for (int n = 4; n < 5; n++) {
 		int a = 0;
@@ -72,7 +72,7 @@ int main() {
 	}
 	cout << endl;
 
-	// 3-2. w[k] = 2 (n-1 <= k <= 8), a[n] = -2n+20 (5<=n<10)
+	// 3-2. Wn[k] = 2 (n-1 <= k <= 8), a[n] = -2n+20 (5<=n<10)
 	cout << "5 <= n < 10" << endl;
 	for (int n = 5; n < 10; n++) {
 		int a = 0;
